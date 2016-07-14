@@ -3,7 +3,10 @@ package prob4;
 public class MainApp {
 	public static void main(String[] args) {
 		try {
-			Stack<String> stack = new MyStack(3);
+			//Stack stack = new MyStack(-1);
+			//System.out.println("======================================");
+
+			Stack stack = new MyStack(3);
 			stack.push("Hello");
 			stack.push("World");
 			stack.push("!!!");
@@ -14,14 +17,15 @@ public class MainApp {
 				System.out.println(stack.pop());
 			}
 
+			System.out.println("======================================");
+
 			stack = new MyStack(3);
 			stack.push("Hello");
 
 			System.out.println(stack.pop());
 			System.out.println(stack.pop());
-			
-		} catch( MyStackEmptyException ex ) {
-			System.out.println( "error:" + ex );
+		} catch (MyStackEmptyException ex) {
+			System.out.println( ex );
 		}
 	}
 }
